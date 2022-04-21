@@ -2,6 +2,17 @@
   "name": "prisma-api",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Renato Caçula",
-  "license": "MIT"
+  "author": "Renato Caçula <renatocacula2015@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^3.12.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  }
 }
