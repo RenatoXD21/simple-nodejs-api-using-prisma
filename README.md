@@ -8,7 +8,8 @@ This project is a simple API developed with **NodeJS Express** using **Prisma** 
 
 * #### System requirements
 	To run the project on your computer you will need to have installed the [**NodeJs**](https://nodejs.org/) and [**Yarn**](https://yarnpkg.com/getting-started/install). Also you will need to have one of the following databases installed on your computer: **PostgreSQL, MySQL, SQLite or Microsoft SQL Server**. 
-	> *(  **MongoDB** may also be used as database, but you will need to update the schema to use it. Read the [schema section](https://www.prisma.io/docs/concepts/components/prisma-schema) on **Prisma** doc for help.  )*
+	> ***Yarn** version must be classic. Yarn 2+ shown problems with **Prisma**. If your Yarn version is not classic run `yarn set version classic` on terminal*.
+	> ***MongoDB** may also be used as database, but you will need to update the schema to use it. Read the [schema section](https://www.prisma.io/docs/concepts/components/prisma-schema) on **Prisma** doc for help.*
 
 	
 	
@@ -25,9 +26,11 @@ This project is a simple API developed with **NodeJS Express** using **Prisma** 
 	
 	* On the project repository create the **.env** file.
 	
-	* Inside **.env** put and edit with your database connection info: `DATABASE_URL = CONNECTOR://USER:PASSWORD@HOST:PORT/DATABASE`
-		> **Example:** `DATABASE_URL = mysql://renato:x@127.0.0.1:3306/prisma-api`
-
+	* Inside **.env** put and edit with your database connection info: `DATABASE_URL = CONNECTOR://USER:PASSWORD@HOST:PORT/DATABASE`. 
+		**Example:** `DATABASE_URL = mysql://renato:x@127.0.0.1:3306/prisma-api`
+		
+		> *If you are using **SQL Server** the connection URL used to connect to an Microsoft SQL Server database follows the JDBC standard. Read [SQL Server section](https://www.prisma.io/docs/concepts/database-connectors/sql-server) on **Prisma** doc for help.*
+		
 	* On terminal run **`yarn prisma generate`** to generate scripts for Node and then run **`yarn prisma migrate dev`** to set the schema on the database.
 	
 	  

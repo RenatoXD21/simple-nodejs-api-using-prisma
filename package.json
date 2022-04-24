@@ -1,6 +1,9 @@
 {
   "name": "prisma-api",
   "version": "1.0.0",
+  "engines": {
+    "yarn": "1.x"
+  },
   "main": "index.js",
   "author": "Renato Caçula <renatocacula2015@gmail.com>",
   "license": "MIT",
